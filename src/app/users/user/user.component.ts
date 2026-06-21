@@ -1,4 +1,5 @@
 import { Component, computed, input } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { type User } from './user.model';
 
@@ -7,6 +8,7 @@ import { type User } from './user.model';
   standalone: true,
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
+  imports: [RouterLink, RouterLinkActive],
 })
 export class UserComponent {
   user = input.required<User>();
